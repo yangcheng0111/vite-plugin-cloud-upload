@@ -1,0 +1,61 @@
+{
+  "name": "vite-plugin-cloud-upload",
+  "version": "1.0.9",
+  "description": "一个用于将构建资产自动上传至云存储（腾讯云 COS 和阿里云 OSS）的 Vite 插件。 | A Vite plugin to automatically upload build assets to cloud storage (Tencent Cloud COS & Aliyun OSS).",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "rolldown",
+    "build",
+    "upload",
+    "uploader",
+    "deploy",
+    "sync",
+    "cloud",
+    "storage",
+    "assets",
+    "cdn",
+    "cos",
+    "oss",
+    "tencent",
+    "aliyun",
+    "tencent-cos",
+    "aliyun-oss"
+  ],
+  "author": "杨程",
+  "license": "MIT",
+  "peerDependencies": {
+    "vite": "npm:rolldown-vite@latest"
+  },
+  "dependencies": {
+    "ali-oss": "^6.23.0",
+    "p-limit": "^7.1.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2",
+    "@types/ali-oss": "^6.16.11",
+    "@types/mime-types": "^3.0.1",
+    "@types/node": "^22.18.5",
+    "cos-nodejs-sdk-v5": "^2.15.4",
+    "mime-types": "^3.0.1",
+    "typescript": "~5.8.0",
+    "vite": "npm:rolldown-vite@latest",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
